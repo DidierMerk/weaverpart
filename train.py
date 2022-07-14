@@ -775,6 +775,15 @@ def main(args):
             _logger.info('Epoch #%d validating' % epoch)
             valid_metric = evaluate(model, val_loader, dev, epoch, loss_func=loss_func,
                                     steps_per_epoch=args.steps_per_epoch_val, tb_helper=tb)
+            print("HELLO EVERYONE THESE ARE THE VALID METRICS: ", valid_metric)
+            print("#################")
+            print("#################")
+            print("#################")
+            print("#################")
+            print("#################")
+            print("#################")
+            print("#################")
+            
             is_best_epoch = (
                 valid_metric < best_valid_metric) if args.regression_mode else(
                 valid_metric > best_valid_metric)
